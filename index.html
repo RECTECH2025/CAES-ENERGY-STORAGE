@@ -1,7 +1,11 @@
 import React from 'react';
-import { Zap, Battery, Wind, Sun, Factory, Ship, Globe, Leaf, Shield, Scale, TrendingUp, Users, Database, Cloud, Droplets, Truck, Home, Server, Building, Waves, ZapIcon } from 'lucide-react';
+import { 
+  Zap, Battery, Wind, Sun, Factory, Ship, Globe, Leaf, Shield, 
+  Scale, TrendingUp, Users, Database, Cloud, Truck, Home, Server, 
+  Building, Waves 
+} from 'lucide-react';
 
-const App = () => {
+export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -10,7 +14,7 @@ const App = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="bg-blue-600 p-2 rounded-lg">
-                <ZapIcon className="h-6 w-6 text-white" />
+                <Zap className="h-6 w-6 text-white" />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Compressed Air Energy Storage (CAES)</h1>
@@ -25,7 +29,7 @@ const App = () => {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Revolutionizing Energy Storage
@@ -53,7 +57,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* CAES vs Battery Comparison */}
+        {/* CAES vs Battery */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">CAES vs Battery: The Clear Choice</h2>
@@ -110,7 +114,7 @@ const App = () => {
             </div>
           </div>
 
-          {/* Footprint Visualization */}
+          {/* Footprint */}
           <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Land Use Efficiency</h3>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
@@ -142,7 +146,6 @@ const App = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Mini CAES */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center mb-4">
                 <Scale className="h-6 w-6 text-blue-600 mr-2" />
@@ -156,7 +159,7 @@ const App = () => {
                   { icon: Server, label: "Data Centers" },
                   { icon: Home, label: "Residential" },
                   { icon: Truck, label: "Remote/Mining" },
-                  { icon: Ship, label: "Maritime/Shipping" },
+                  { icon: Ship, label: "Maritime" },
                   { icon: Building, label: "Commercial" }
                 ].map((app, i) => (
                   <div key={i} className="flex items-center space-x-2">
@@ -167,7 +170,6 @@ const App = () => {
               </div>
             </div>
 
-            {/* Macro CAES */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center mb-4">
                 <TrendingUp className="h-6 w-6 text-green-600 mr-2" />
@@ -193,7 +195,6 @@ const App = () => {
             </div>
           </div>
 
-          {/* Underground Storage */}
           <div className="mt-8 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
             <div className="flex items-center mb-4">
               <Cloud className="h-6 w-6 text-purple-600 mr-2" />
@@ -231,74 +232,53 @@ const App = () => {
           </div>
         </section>
 
-        {/* Key Benefits */}
+        {/* Benefits */}
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CAES?</h2>
             <p className="text-gray-600">The definitive energy storage solution for the modern world</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                icon: Shield,
-                title: "Unmatched Safety",
-                desc: "Zero fire/explosion risk, no toxic chemicals"
-              },
-              {
-                icon: Leaf,
-                title: "Zero Environmental Impact",
-                desc: "No emissions, no landfill waste, sustainable"
-              },
-              {
-                icon: Globe,
-                title: "Global Deployment",
-                desc: "Operates in all climates (-30°F to +140°F)"
-              },
-              {
-                icon: TrendingUp,
-                title: "Superior Economics",
-                desc: "4-6 year payback, lower lifetime costs"
-              }
-            ].map((benefit, i) => (
+              { icon: Shield, title: "Unmatched Safety", desc: "Zero fire/explosion risk" },
+              { icon: Leaf, title: "Zero Environmental Impact", desc: "No emissions or toxic waste" },
+              { icon: Globe, title: "Global Deployment", desc: "Operates in all climates" },
+              { icon: TrendingUp, title: "Superior Economics", desc: "4-6 year payback" }
+            ].map((b, i) => (
               <div key={i} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                  <b.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.desc}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{b.title}</h3>
+                <p className="text-gray-600 text-sm">{b.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Energy Strategy?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Discover how CAES can provide sustainable, scalable, and cost-effective energy storage for your organization.
+            Discover how CAES can provide sustainable, scalable, and cost-effective energy storage.
           </p>
-          <div className="flex justify-center">
-            <a 
-              href="https://calendar.app.google/dAhT9BpcbwsvWc2G7" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-            >
-              Request a Consultation
-            </a>
-          </div>
+          <a 
+            href="https://calendar.app.google/dAhT9BpcbwsvWc2G7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+          >
+            Request a Consultation
+          </a>
         </section>
       </main>
 
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">© 2025 CAES Technology Solutions. All rights reserved.</p>
-          <p className="text-gray-500 text-sm mt-2">Powered by Lloyds Engineering Pty Ltd</p>
+          <p className="text-gray-300 text-sm mt-2 font-medium">Presented by Ricaurte Energy Capital LLC</p>
         </div>
       </footer>
     </div>
   );
-};
-
-export default App;
+}
