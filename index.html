@@ -1,0 +1,304 @@
+import React from 'react';
+import { Zap, Battery, Wind, Sun, Factory, Ship, Globe, Leaf, Shield, Scale, TrendingUp, Users, Database, Cloud, Droplets, Truck, Home, Server, Building, Waves, ZapIcon } from 'lucide-react';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <div className="bg-blue-600 p-2 rounded-lg">
+                <ZapIcon className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold text-gray-900">Compressed Air Energy Storage (CAES)</h1>
+                <p className="text-gray-600">The Future-Proof Energy Storage Solution</p>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
+              <span>Scalable • Sustainable • Secure</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Revolutionizing Energy Storage
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            CAES delivers superior performance, sustainability, and cost-efficiency compared to traditional battery systems—ideal for grid-scale and industrial applications worldwide.
+          </p>
+          <div className="bg-gradient-to-r from-blue-500 to-green-500 p-1 rounded-xl inline-block">
+            <div className="bg-white rounded-xl px-8 py-4">
+              <div className="flex items-center justify-center space-x-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600">36x</div>
+                  <div className="text-sm text-gray-600">Less Land Use</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600">Zero</div>
+                  <div className="text-sm text-gray-600">Emissions & Risk</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600">∞</div>
+                  <div className="text-sm text-gray-600">Lifespan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CAES vs Battery Comparison */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">CAES vs Battery: The Clear Choice</h2>
+            <p className="text-gray-600">Comprehensive comparison across critical performance metrics</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <Zap className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-bold text-gray-900">CAES Advantages</h3>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Cost: $0.7M–$1.7M per MW",
+                  "Footprint: ½ acre for 300MW",
+                  "Global deployment (-30°F to +140°F)",
+                  "Zero environmental impact",
+                  "Indefinite component life",
+                  "Earthquake & hurricane proof",
+                  "Multi-use: LNG, CO₂, H₂, water storage",
+                  "No fire/explosion risk"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start">
+                    <div className="h-2 w-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <Battery className="h-8 w-8 text-red-600 mr-3" />
+                <h3 className="text-xl font-bold text-gray-900">Battery Limitations</h3>
+              </div>
+              <div className="space-y-3">
+                {[
+                  "Cost: $2M–$2.5M per MW",
+                  "Footprint: 6 acres for 100MW",
+                  "Limited to 60°F–80°F operation",
+                  "High environmental impact",
+                  "2,000 cycle lifespan",
+                  "Limited disaster resistance",
+                  "Single-use only",
+                  "Fire and explosion risk"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start">
+                    <div className="h-2 w-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Footprint Visualization */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Land Use Efficiency</h3>
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12">
+              <div className="text-center">
+                <div className="bg-blue-100 rounded-xl p-6 mb-4">
+                  <div className="text-3xl font-bold text-blue-600">CAES</div>
+                  <div className="text-lg text-gray-700">300 MW Facility</div>
+                  <div className="text-2xl font-bold text-blue-800 mt-2">½ Acre</div>
+                </div>
+              </div>
+              <div className="text-4xl text-gray-400">VS</div>
+              <div className="text-center">
+                <div className="bg-red-100 rounded-xl p-6 mb-4">
+                  <div className="text-3xl font-bold text-red-600">Battery</div>
+                  <div className="text-lg text-gray-700">100 MW Facility</div>
+                  <div className="text-2xl font-bold text-red-800 mt-2">6 Acres</div>
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-600 mt-6">CAES uses 36x less land per MW than battery systems</p>
+          </div>
+        </section>
+
+        {/* Applications */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">CAES Applications</h2>
+            <p className="text-gray-600">Versatile solutions for every energy storage need</p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Mini CAES */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <Scale className="h-6 w-6 text-blue-600 mr-2" />
+                <h3 className="text-xl font-bold text-gray-900">Mini CAES (1–30 MW)</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Sun, label: "Solar (small)" },
+                  { icon: Wind, label: "Wind (small)" },
+                  { icon: Factory, label: "Industrial" },
+                  { icon: Server, label: "Data Centers" },
+                  { icon: Home, label: "Residential" },
+                  { icon: Truck, label: "Remote/Mining" },
+                  { icon: Ship, label: "Maritime/Shipping" },
+                  { icon: Building, label: "Commercial" }
+                ].map((app, i) => (
+                  <div key={i} className="flex items-center space-x-2">
+                    <app.icon className="h-4 w-4 text-blue-500" />
+                    <span className="text-sm text-gray-700">{app.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Macro CAES */}
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+              <div className="flex items-center mb-4">
+                <TrendingUp className="h-6 w-6 text-green-600 mr-2" />
+                <h3 className="text-xl font-bold text-gray-900">Macro CAES (20–1000+ MW)</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Sun, label: "Solar (large)" },
+                  { icon: Wind, label: "Wind (large)" },
+                  { icon: Waves, label: "Ocean Hydro" },
+                  { icon: Factory, label: "Industrial (large)" },
+                  { icon: Building, label: "Grid Regulation" },
+                  { icon: Zap, label: "Peak Offset" },
+                  { icon: Users, label: "Load Sharing" },
+                  { icon: Database, label: "Gas Turbine" }
+                ].map((app, i) => (
+                  <div key={i} className="flex items-center space-x-2">
+                    <app.icon className="h-4 w-4 text-green-500" />
+                    <span className="text-sm text-gray-700">{app.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Underground Storage */}
+          <div className="mt-8 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+            <div className="flex items-center mb-4">
+              <Cloud className="h-6 w-6 text-purple-600 mr-2" />
+              <h3 className="text-xl font-bold text-gray-900">Underground Vertical Bore Storage</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Compressed Storage</h4>
+                <div className="space-y-1 text-sm text-gray-600">
+                  <div>• CAES</div>
+                  <div>• CNG</div>
+                  <div>• CO₂</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Insulated Storage</h4>
+                <div className="space-y-1 text-sm text-gray-600">
+                  <div>• LNG</div>
+                  <div>• Liquid CO₂</div>
+                  <div>• Hydrogen</div>
+                  <div>• Ammonia</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Ambient Storage</h4>
+                <div className="space-y-1 text-sm text-gray-600">
+                  <div>• Water</div>
+                  <div>• Natural Gas</div>
+                  <div>• Oil & Petroleum</div>
+                  <div>• Grains & Dry Foods</div>
+                  <div>• Radioactive Waste</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Benefits */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CAES?</h2>
+            <p className="text-gray-600">The definitive energy storage solution for the modern world</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Shield,
+                title: "Unmatched Safety",
+                desc: "Zero fire/explosion risk, no toxic chemicals"
+              },
+              {
+                icon: Leaf,
+                title: "Zero Environmental Impact",
+                desc: "No emissions, no landfill waste, sustainable"
+              },
+              {
+                icon: Globe,
+                title: "Global Deployment",
+                desc: "Operates in all climates (-30°F to +140°F)"
+              },
+              {
+                icon: TrendingUp,
+                title: "Superior Economics",
+                desc: "4-6 year payback, lower lifetime costs"
+              }
+            ].map((benefit, i) => (
+              <div key={i} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Energy Strategy?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Discover how CAES can provide sustainable, scalable, and cost-effective energy storage for your organization.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="https://calendar.app.google/dAhT9BpcbwsvWc2G7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+            >
+              Request a Consultation
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-900 text-white py-8 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-400">© 2025 CAES Technology Solutions. All rights reserved.</p>
+          <p className="text-gray-500 text-sm mt-2">Powered by Lloyds Engineering Pty Ltd</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
